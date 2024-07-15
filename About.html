@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>617 Boston Movers | About Us</title>
+    <link rel="icon" type="favicon"
+        href="https://617bostonmovers.com/wp-content/uploads/2023/11/617-Boston-Movers-logo.png.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Discover the trusted Boston moving company committed to making your relocation stress-free. 617 Boston Movers has over a decade of experience providing professional, efficient moving services in the areas of Boston. Learn more about our team of expert movers and our dedication to customer satisfaction.">
+    <style>
+        html,
+        body {
+            background-color: #FFFFFF;
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4630D2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: #4630D2;
+            color: #ccc;
+            padding: 10px 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+
+        .website-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: inherit;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #7096c5;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipMfOFX7DIjXLX6KyfB1NBSn8TXtBfEssc5kn6to=s680-w680-h510');
+            background-size: cover;
+            background-position: center top;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 70px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero h1,
+        .hero button {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #333;
+        }
+
+        .section h3 {
+            color: #333;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-links a:hover {
+            color: #ccc;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            font-family: Arial, sans-serif;
+            text-align: justify;
+            /* Add text alignment */
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .content {
+            flex: 0 0 65%;
+        }
+
+        .image-container {
+            flex: 0 0 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .youtube-link {
+            margin-top: 20px;
+        }
+
+        .youtube-link textarea {
+            width: 100%;
+            resize: vertical;
+            align-items: center;
+        }
+
+        .section .google-form {
+            margin-top: 40px;
+        }
+
+        .section .google-form iframe {
+            width: 100%;
+            height: 2230px;
+            border: none;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-list li {
+            flex: 0 0 30%;
+            /* Adjust width as needed */
+            margin-bottom: 20px;
+            /* Add some space between list items */
+        }
+
+        .contact-list h3,
+        .contact-list h4 {
+            margin-top: 0;
+            /* Remove default top margin for consistency */
+        }
+
+        .contact-list p {
+            margin-bottom: 5px;
+            /* Add space between paragraphs */
+        }
+
+        .google-maps {
+            flex: 1;
+            /* Make each map container take up equal space */
+            max-width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            /* Center the maps horizontally */
+        }
+
+        .google-maps-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+            /* Add margin to create space between rows */
+        }
+
+
+        .fa {
+            padding: 10px;
+            font-size: 31px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #4630D2;
+        }
+
+        .footerContainer {
+            width: 100%;
+            padding: 70px 30px 20px;
+        }
+
+        .socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0, 9;
+        }
+
+        /* Hover affect on social media icon */
+        .socialIcons a:hover {
+            background-color: rgba(51, 51, 51, 0.966);
+            transition: 0.5s;
+        }
+
+        .socialIcons a:hover i {
+            color: white;
+            transition: 0.5s;
+        }
+
+        .footerNav {
+            margin: 30px 0;
+        }
+
+        .footerNav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .footerNav ul li a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition: 0.5s;
+
+        }
+
+        .footerNav ul li a:hover {
+            opacity: 1;
+        }
+
+        .footerBottom {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerBottom p {
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
+                flex-direction: column;
+            }
+
+            .footerNav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 10px;
+            }
+
+            .socialIcons a {
+                padding: 8px;
+                margin: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://617bostonmovers.com/wp-content/uploads/2023/11/617-Boston-Movers-logo.png.webp"
+                    alt="617 Boston Movers">
+            </div>
+            <div class="website-name">617 Boston Movers</div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>About US</h1>
+        <a href="tel:+16172084040"><button>Call Now</button></a>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="section">
+    <p style="font-family: Arial, Helvetica, sans-serif; 
+    margin: 0 auto;
+    padding-left: 20px; ">
+        617 Boston Movers proudly serves the Boston metro area and beyond with fast and affordable moving solutions. Our
+        services include local and long-distance moves, storage, packing, residential and commercial relocations,
+        in-house moving, interstate moves, last-minute moves, and hourly moves. Our mobile team allows you to choose the
+        time and location for your service, ensuring a convenient and stress-free experience. We are dedicated to making
+        every move smooth and hassle-free for our customers.
+    </p>
+    <br>
+    <h2 style="color: #007bff; padding-left: 30px;">Find US Online at:</h2>
+    <br>
+    <div id="links-container" style="padding-left: 30px;"></div>
+
+    <br>
+    <br>
+        </div>
+        </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+
+                <a href="https://www.facebook.com/617bostonmovers/ 
+                    "><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/617bostonmovers/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/617BostonMovers"><i class="fa-brands fa-twitter"></i></a>
+                <a
+                    href="https://www.google.com/maps/d/viewer?mid=1GHzoZBwtB8tQtACdnKmW56nB8b1Ykcw&ll=42.3824655%2C-71.03228209999999&z=17"><i
+                        class="fa-brands fa-google-plus"></i></a>
+
+            </div>
+
+        </div>
+        <p>Copyright &copy;2024 | 617 Boston Movers, 215 Condor St, Boston, MA 02128, USA +1 (617) 208-4040</p>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('header');
+            header.classList.toggle('scrolled', window.pageYOffset > 0);
+        });
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Array containing your links
+            const links = [
+    "https://www.yelp.com/biz/617-boston-movers-boston",
+    "https://www.bbb.org/us/ma/boston/profile/moving-services/617-boston-movers-0021-563353",
+    "https://www.bing.com/maps?osid=9ec157f5-9a1a-4241-8552-44c547cfdbb3&cp=19.046541%7E72.999344&lvl=11.0&imgid=f1bb57d8-b2b3-498b-87f1-99ecadf251ac&v=2&sV=2&form=S00027",
+    "https://www.mapquest.com/us/massachusetts/617-boston-movers-670855636",
+    "https://www.hotfrog.com/company/2b58a9e307d5639220be74b8c98df417/617-boston-movers/boston/moving-services",
+    "https://www.facebook.com/617bostonmovers/",
+    "https://www.instagram.com/617bostonmovers/",
+    "https://x.com/617BostonMovers",
+    "https://www.youtube.com/@617bostonmovers",
+    "https://www.manta.com/c/m1wd9wn/617-boston-movers",
+    "https://www.merchantcircle.com/617-boston-movers-boston-ma",
+    "https://www.ailoq.com/massachusetts/boston/617-boston-movers",
+    "https://www.storeboard.com/617bostonmovers",
+    "https://www.brownbook.net/business/52772027/617-boston-movers/",
+    "https://www.trepup.com/@617bostonmovers",
+    "https://boston.bubblelife.com/community/617_boston_movers",
+    "https://ezlocal.com/ma/boston/moving-and-storage-service/0918136354",
+    "https://www.callupcontact.com/b/businessprofile/617_Boston_Movers/9091659",
+    "https://www.techdirectory.io/boston/home-services/617-boston-movers",
+    "https://www.startus.cc/company/617-boston-movers",
+    "https://globalcatalog.com/617bostonmovers.us",
+    "https://us.enrollbusiness.com/BusinessProfile/6708995/617-Boston-Movers-Boston-MA-02128",
+    "http://www.askmap.net/location/6930732/united-states/617-boston-movers",
+    "https://www.n49.com/biz/5992865/617-boston-movers/",
+    "https://unltd.directory/business-services/united-states/massachusetts/boston/professional-services/617-boston-movers",
+    "https://www.cityfos.com/company/617-Boston-Movers-in-Boston-MA-23024602.htm",
+    "https://www.cityof.com/ma/boston/617-boston-movers-7318296",
+    "https://www.place123.net/place/617-boston-movers-boston-united-states",
+    "https://www.a-zbusinessfinder.com/business-directory/617-Boston-Movers-Boston-Massachusetts-USA/34077121/",
+    "https://www.find-us-here.com/businesses/617-Boston-Movers-Boston-Massachusetts-USA/34077221/",
+    "https://www.townplanner.com/boston/ma/directory/packaging-shipping/617-boston-movers/249494/",
+    "https://citysquares.com/b/617-boston-movers-25723009",
+    "https://www.provenexpert.com/617-boston-movers/",
+    "https://www.freelistingusa.com/listings/617-boston-movers-ma",
+    "https://trueen.com/business/listing/617-boston-movers/439936",
+    "https://list.ly/list/A816-617-boston-movers",
+    "https://www.classifiedads.com/moving_storage/d1595nhrq3db1",
+    "https://www.yplocal.com/boston/business-professional-services/617-boston-movers",
+    "https://issuu.com/617bostonmovers",
+    "https://zumvu.com/617bostonmovers/",
+    "https://www.cybo.com/US-biz/boston-movers_120",
+    "https://www.nextbizthing.com/boston/travel-20-transportation/617-boston-movers",
+    "https://www.bunity.com/617-boston-movers",
+    "https://www.preferredprofessionals.com/boston-ma-united-states/professional-services-by-category/617-boston-movers",
+    "https://www.bizbangboom.com/boston-ma-united-states/transportation-20-storage/617-boston-movers",
+    "https://dyrectory.com/listings/617-boston-movers",
+    "https://www.earthmom.org/boston-ma-united-states/professional-services/617-boston-movers",
+    "https://www.acompio.us/617-Boston-Movers-39751913.html",
+    "https://1businessworld.com/company/617-boston-movers/",
+    "https://www.mybizweb.com/boston-ma-united-states/business-professional-services/617-boston-movers"
+];
+
+
+            // Reference to the container where you want to insert the links
+            const container = document.getElementById('links-container');
+            container.classList.add('center-content');
+
+
+            // Loop through each link and generate the HTML dynamically
+            links.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.setAttribute('href', link);
+                linkElement.setAttribute('target', '_blank');
+                linkElement.style.color = '#226e93'; // Set link color
+                linkElement.style.textDecoration = 'none'; // Remove underline
+                linkElement.textContent = link; // You can set the link text as needed
+                container.appendChild(linkElement);
+                container.appendChild(document.createElement('br')); // Optional: Add line breaks between links
+                container.appendChild(document.createElement('br')); // Increase line break space after each link
+            });
+        });
+
+    </script>
+</body>
+
+</html>
